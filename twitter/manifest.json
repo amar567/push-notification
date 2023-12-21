@@ -2,8 +2,8 @@
     "background_color": "#ffffff",
     "categories": [
         "social",
-        "news",
-        "magazines"
+        "education",
+        "networking"
     ],
     "description": "Get breaking news, politics, trending music, world events, sports scores, and the latest global news stories as they unfold - all with less data.",
     "display": "standalone",

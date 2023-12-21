@@ -1,9 +1,9 @@
 {
   "background_color": "#ffffff",
   "categories": [
-      "social",
-      "news",
-      "magazines"
+    "social",
+    "education",
+    "networking"
   ],
   "description": "Get breaking news, politics, trending music, world events, sports scores, and the latest global news stories as they unfold - all with less data.",
   "display": "standalone",
@@ -53,7 +53,7 @@
       }
   ],
   "share_target": {
-      "action": "compose/tweet",
+      "action": "/create_post",
       "enctype": "multipart/form-data",
       "method": "POST",
       "params": {
@@ -77,7 +77,7 @@
   "shortcuts": [
       {
           "name": "New post",
-          "url": "/compose/tweet?utm_source=jumplist&utm_medium=shortcut",
+          "url": "/create_post",
           "icons": [
               {
                   "src": "https://ornate-beijinho-b0187e.netlify.app/favIcon192.png",
@@ -87,8 +87,19 @@
           ]
       },
       {
-          "name": "Explore",
-          "url": "/explore?utm_source=jumplist&utm_medium=shortcut",
+          "name": "Gupshup",
+          "url": "/gupshup",
+          "icons": [
+              {
+                  "src": "https://ornate-beijinho-b0187e.netlify.app/favIcon192.png",
+                  "type": "image/png",
+                  "sizes": "193x193"
+              }
+          ]
+      },
+      {
+          "name": "Feed",
+          "url": "/home",
           "icons": [
               {
                   "src": "https://ornate-beijinho-b0187e.netlify.app/favIcon192.png",
@@ -99,18 +110,7 @@
       },
       {
           "name": "Notifications",
-          "url": "/notifications?utm_source=jumplist&utm_medium=shortcut",
-          "icons": [
-              {
-                  "src": "https://ornate-beijinho-b0187e.netlify.app/favIcon192.png",
-                  "type": "image/png",
-                  "sizes": "193x193"
-              }
-          ]
-      },
-      {
-          "name": "Direct Messages",
-          "url": "/messages?utm_source=jumplist&utm_medium=shortcut",
+          "url": "/notification",
           "icons": [
               {
                   "src": "https://ornate-beijinho-b0187e.netlify.app/favIcon192.png",
@@ -124,7 +124,6 @@
   "start_url": "https://ornate-beijinho-b0187e.netlify.app/?utm_source=homescreen&utm_medium=shortcut",
   "theme_color": "#ffffff",
   "scope": "/",
-  "android_package_name": "com.twitter.android",
   "prefer_related_applications": true,
   "launch_handler": {
       "route_to": "existing-client",
