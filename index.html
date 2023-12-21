@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#4285f4" />
+
+    <title>Push notification</title>
+
+    <link rel="manifest" href="manifest.json" />
+    <link rel="shortcut icon" href="/favIcon.png" type="image/x-icon">
+
+</head>
+
+<body>
+
+    <h1>
+        yo!
+    </h1>
+    <button id="install" hidden>Install</button>
+    <button onclick="notifyMe()">Notify me!</button>
+
+
+    <script>
+        // if ('serviceWorker' in navigator && 'PushManager' in window) {
+        //     navigator.serviceWorker.register('sw.js')
+        //         .then(function (registration) {
+        //             console.log('Service Worker registered with scope:', registration.scope);
+        //         })
+        //         .catch(function (error) {
+        //             console.error('Service Worker registration failed:', error);
+        //         });
+        // }
+
+        const registerServiceWorker = async () => {
+            if ("serviceWorker" in navigator) {
+                try {
+                    const registration = await navigator.serviceWorker.register("/sw.js", {
+                        scope: "/",
+                    });
+                    if (registration.installing) {
+                        console.log("Service worker installing");
+                    } else if (registration.waiting) {
+                        console.log("Service worker installed");
+                    } else if (registration.active) {
+                        console.log("Service worker active");
+                    }
+                } catch (error) {
+                    console.error(`Registration failed with ${error}`);
+                }
+            }
+        };
+
+
+        let installPrompt = null;
+        const installButton = document.querySelector("#install");
+
+        window.addEventListener("beforeinstallprompt", (event) => {
+            event.preventDefault();
+            installPrompt = event;
+            installButton.removeAttribute("hidden");
+        });
+
+        installButton.addEventListener("click", async () => {
+            if (!installPrompt) {
+                return;
+            }
+            const result = await installPrompt.prompt();
+            console.log(`Install prompt was: ${result.outcome}`);
+            installPrompt = null;
+            installButton.setAttribute("hidden", "");
+        });
+
+
+
+        registerServiceWorker();
+
+
+        // if ('Notification' in window) {
+        //     Notification.requestPermission()
+        //         .then(function (permission) {
+        //             if (permission === 'granted') {
+        //                 console.log('Notification permission granted.');
+        //             } else {
+        //                 console.error('Notification permission denied.');
+        //             }
+        //         });
+        // }
+
+        function notifyMe() {
+            if (!("Notification" in window)) {
+                // Check if the browser supports notifications
+                alert("This browser does not support desktop notification");
+            } else if (Notification.permission === "granted") {
+                // Check whether notification permissions have already been granted;
+                // if so, create a notification
+                const notification = new Notification("Hi there!");
+                // …
+            } else if (Notification.permission !== "denied") {
+                // We need to ask the user for permission
+                Notification.requestPermission().then((permission) => {
+                    // If the user accepts, let's create a notification
+                    if (permission === "granted") {
+                        const notification = new Notification("Hi there!");
+                        // …
+                    }
+                });
+            }
+
+            // At last, if the user has denied notifications, and you
+            // want to be respectful there is no need to bother them anymore.
+        }
+
+    </script>
+
+    <script src="fb.js"></script>
+</body>
+
+</html>

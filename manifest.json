@@ -1,0 +1,133 @@
+{
+  "background_color": "#ffffff",
+  "categories": [
+      "social",
+      "news",
+      "magazines"
+  ],
+  "description": "Get breaking news, politics, trending music, world events, sports scores, and the latest global news stories as they unfold - all with less data.",
+  "display": "standalone",
+  "gcm_sender_id": "49625052041",
+  "gcm_user_visible_only": true,
+  "icons": [
+      {
+          "src": "http://localhost:5500/favIcon192.png",
+          "sizes": "193x193",
+          "type": "image/png"
+      },
+      {
+          "src": "http://localhost:5500/favIcon512.png",
+          "sizes": "512x512",
+          "type": "image/png"
+      },
+      {
+          "purpose": "maskable",
+          "src": "http://localhost:5500/favIcon192.png",
+          "sizes": "193x193",
+          "type": "image/png"
+      },
+      {
+          "purpose": "maskable",
+          "src": "http://localhost:5500/favIcon512.png",
+          "sizes": "512x512",
+          "type": "image/png"
+      }
+  ],
+  "name": "Zoop",
+  "screenshots": [
+      {
+          "src": "http://localhost:5500/favIcon.png",
+          "sizes": "512x518",
+          "type": "image/png"
+      },
+      {
+          "src": "http://localhost:5500/favIcon.png",
+          "sizes": "512x518",
+          "type": "image/png"
+      },
+      {
+          "src": "http://localhost:5500/favIcon.png",
+          "sizes": "512x518",
+          "type": "image/png",
+          "form_factor":"wide"
+      }
+  ],
+  "share_target": {
+      "action": "compose/tweet",
+      "enctype": "multipart/form-data",
+      "method": "POST",
+      "params": {
+          "title": "title",
+          "text": "text",
+          "url": "url",
+          "files": [
+              {
+                  "name": "externalMedia",
+                  "accept": [
+                      "image/jpeg",
+                      "image/png",
+                      "image/gif",
+                      "video/quicktime",
+                      "video/mp4"
+                  ]
+              }
+          ]
+      }
+  },
+  "shortcuts": [
+      {
+          "name": "New post",
+          "url": "/compose/tweet?utm_source=jumplist&utm_medium=shortcut",
+          "icons": [
+              {
+                  "src": "http://localhost:5500/favIcon192.png",
+                  "type": "image/png",
+                  "sizes": "193x193"
+              }
+          ]
+      },
+      {
+          "name": "Explore",
+          "url": "/explore?utm_source=jumplist&utm_medium=shortcut",
+          "icons": [
+              {
+                  "src": "http://localhost:5500/favIcon192.png",
+                  "type": "image/png",
+                  "sizes": "193x193"
+              }
+          ]
+      },
+      {
+          "name": "Notifications",
+          "url": "/notifications?utm_source=jumplist&utm_medium=shortcut",
+          "icons": [
+              {
+                  "src": "http://localhost:5500/favIcon192.png",
+                  "type": "image/png",
+                  "sizes": "193x193"
+              }
+          ]
+      },
+      {
+          "name": "Direct Messages",
+          "url": "/messages?utm_source=jumplist&utm_medium=shortcut",
+          "icons": [
+              {
+                  "src": "http://localhost:5500/favIcon192.png",
+                  "type": "image/png",
+                  "sizes": "193x193"
+              }
+          ]
+      }
+  ],
+  "short_name": "Zoop",
+  "start_url": "http://localhost:5500/?utm_source=homescreen&utm_medium=shortcut",
+  "theme_color": "#ffffff",
+  "scope": "/",
+  "android_package_name": "com.twitter.android",
+  "prefer_related_applications": true,
+  "launch_handler": {
+      "route_to": "existing-client",
+      "navigate_existing_client": "never"
+  }
+}
