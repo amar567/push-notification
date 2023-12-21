@@ -95,28 +95,6 @@
                     "sizes": "192x192"
                 }
             ]
-        },
-        {
-            "name": "Notifications",
-            "url": "/notifications?utm_source=jumplist&utm_medium=shortcut",
-            "icons": [
-                {
-                    "src": "https://abs.twimg.com/responsive-web/client-web/icon-notifications-stroke.429602da.png",
-                    "type": "image/png",
-                    "sizes": "192x192"
-                }
-            ]
-        },
-        {
-            "name": "Direct Messages",
-            "url": "/messages?utm_source=jumplist&utm_medium=shortcut",
-            "icons": [
-                {
-                    "src": "https://abs.twimg.com/responsive-web/client-web/icon-messages-stroke.5f95edca.png",
-                    "type": "image/png",
-                    "sizes": "192x192"
-                }
-            ]
         }
     ],
     "short_name": "X",
