@@ -8,7 +8,7 @@ self.addEventListener('push', function (event) {
 
 if (navigator.setAppBadge) {
     // Display the number of unread messages.
-    navigator.setAppBadge(numberOfUnreadMessages);
+    navigator.setAppBadge("2");
 }
 
 // Listen to "push" events in the service worker.
