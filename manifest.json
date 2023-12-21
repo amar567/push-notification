@@ -121,7 +121,7 @@
       }
   ],
   "short_name": "Zoop",
-  "start_url": "https://ornate-beijinho-b0187e.netlify.app/?utm_source=homescreen&utm_medium=shortcut",
+  "start_url": "https://ornate-beijinho-b0187e.netlify.app/home",
   "theme_color": "#ffffff",
   "scope": "/",
   "prefer_related_applications": true,
