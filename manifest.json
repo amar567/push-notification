@@ -11,24 +11,24 @@
   "gcm_user_visible_only": true,
   "icons": [
       {
-          "src": "http://127.0.0.1:5500/favIcon192.png",
+          "src": "https://ornate-beijinho-b0187e.netlify.app/favIcon192.png",
           "sizes": "192x192",
           "type": "image/png"
       },
       {
-          "src": "http://127.0.0.1:5500/favIcon512.png",
+          "src": "https://ornate-beijinho-b0187e.netlify.app/favIcon512.png",
           "sizes": "512x512",
           "type": "image/png"
       },
       {
           "purpose": "maskable",
-          "src": "http://127.0.0.1:5500/favIcon192.png",
+          "src": "https://ornate-beijinho-b0187e.netlify.app/favIcon192.png",
           "sizes": "192x192",
           "type": "image/png"
       },
       {
           "purpose": "maskable",
-          "src": "http://127.0.0.1:5500/favIcon512.png",
+          "src": "https://ornate-beijinho-b0187e.netlify.app/favIcon512.png",
           "sizes": "512x512",
           "type": "image/png"
       }
@@ -36,20 +36,19 @@
   "name": "Zoop",
   "screenshots": [
       {
-          "src": "http://127.0.0.1:5500/ss1.png",
+          "src": "https://ornate-beijinho-b0187e.netlify.app/ss1.png",
           "sizes": "448x800",
           "type": "image/png"
       },
       {
-          "src": "http://127.0.0.1:5500/ss2.png",
+          "src": "https://ornate-beijinho-b0187e.netlify.app/ss2.png",
           "sizes": "370x800",
           "type": "image/png"
       },
       {
-          "src": "http://127.0.0.1:5500/ss3.png",
+          "src": "https://ornate-beijinho-b0187e.netlify.app/ss3.png",
           "sizes": "370x800",
-          "type": "image/png",
-          "form_factor":"wide"
+          "type": "image/png"
       }
   ],
   "share_target": {
@@ -80,7 +79,7 @@
           "url": "/create_post",
           "icons": [
               {
-                  "src": "http://127.0.0.1:5500/new_post.png",
+                  "src": "https://ornate-beijinho-b0187e.netlify.app/new_post.png",
                   "type": "image/png",
                   "sizes": "192x192"
               }
@@ -91,7 +90,7 @@
           "url": "/home",
           "icons": [
               {
-                  "src": "http://127.0.0.1:5500/feed.png",
+                  "src": "https://ornate-beijinho-b0187e.netlify.app/feed.png",
                   "type": "image/png",
                   "sizes": "192x192"
               }
@@ -102,7 +101,7 @@
           "url": "/notification",
           "icons": [
               {
-                  "src": "http://127.0.0.1:5500/notification.png",
+                  "src": "https://ornate-beijinho-b0187e.netlify.app/notification.png",
                   "type": "image/png",
                   "sizes": "192x192"
               }
@@ -110,7 +109,7 @@
       }
   ],
   "short_name": "Zoop",
-  "start_url": "http://127.0.0.1:5500/home",
+  "start_url": "https://ornate-beijinho-b0187e.netlify.app/home",
   "theme_color": "#ffffff",
   "scope": "/",
   "prefer_related_applications": true,
